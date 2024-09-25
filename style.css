@@ -8,6 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box; /* Ensure padding and borders are included in element sizes */
 }
 
 .topBtnContainer {
@@ -27,14 +28,15 @@ body {
 
 .snap-container {
     width: 100%;
-    max-width: 100vw;
-    max-height: 100vh;
+    max-width: 100vw; 
+    max-height: 100vh; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding/borders are included in calculations */
+    padding: 0 10px; /* Add padding to avoid content touching the edges of the screen */
 }
 
 .gameContainer {
@@ -42,10 +44,12 @@ body {
     margin-top: 10px;
     padding: 10px;
     width: 100%;
-    max-width: 80vw;
-    max-height: 80vh;
+    /* max-width: 80vw;  */
+    max-height: 80vh; 
     box-sizing: border-box;
+    overflow: hidden; /* Prevent any content from overflowing */
 }
+
 
 .container {
     text-align: center;
@@ -136,15 +140,18 @@ input {
 
 /* Grid Item Styles */
 .grid-item {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; /* Makes the items circular */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure borders/padding are included */
+    overflow: hidden; /* Ensures no content overflows out of the circular grid item */
+    padding: 5px; /* Adjust padding to ensure content fits */
 }
 
 /* Responsive styles */
@@ -152,10 +159,10 @@ input {
     display: grid;
     gap: 10px;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    width: 100%; 
     max-width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding and borders are included in size */
 }
 
 /* Media Queries for Responsiveness */
@@ -163,41 +170,28 @@ input {
 /* For tablets and smaller devices */
 @media (max-width: 768px) {
     .gameContainer {
-        max-width: 90vw; /* Slightly increase width for smaller screens */
-        max-height: 70vh; /* Adjust height */
+        /* max-width: 90vw; */
+        max-height: 70vh;
     }
-    button {
-        padding: 8px 16px; /* Reduce padding for buttons */
-        font-size: 14px;   /* Reduce font size */
-    }
-    #timer {
-        font-size: 20px;   /* Adjust timer font size */
-        padding: 8px;
+    .grid-item {
+        width: 40px; /* Reduce size of circles on smaller screens */
+        height: 40px;
+        font-size: 20px; /* Adjust font size to fit */
     }
 }
 
 /* For mobile devices */
 @media (max-width: 480px) {
     .gameContainer {
-        max-width: 100vw; /* Full width for mobile */
-        max-height: 60vh; /* Adjust height for mobile */
+        /* max-width: 100vw; */
+        max-height: 60vh;
     }
-    .topBtnContainer {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: stretch;   /* Stretch buttons to full width */
+    .grid-item {
+        width: 30px; /* Further reduce size for mobile */
+        height: 30px;
+        font-size: 16px; /* Adjust font size for mobile */
     }
-    .topBtnContainer > div {
-        flex-direction: column; /* Stack inner div items vertically */
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-    }
-    button {
-        padding: 6px 12px; /* Further reduce button padding */
-        font-size: 12px;   /* Further reduce font size */
-    }
-    #timer {
-        font-size: 18px;   /* Adjust timer font size for mobile */
-        padding: 6px;
+    .snap-container {
+        padding: 0 5px; /* Reduce padding for mobile */
     }
 }
