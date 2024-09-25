@@ -1,0 +1,150 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topBtnContainer {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.topBtnContainer > div {
+    padding: 10px; /* Add your desired padding here */
+    display: flex;  /* Ensure that inner divs can use flex properties */
+    align-items: center; /* Center align items inside each div */
+    width: 100%; /* Optional: Makes divs take full width */
+    justify-content: space-evenly;
+}
+
+.gameContainer {
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px; /* Limit max width for larger screens */
+}
+
+.container {
+    text-align: center;
+}
+
+.gameContainerBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+#timer {
+    min-width: 10vh;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Button and Input Styles */
+.button-container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode colors */
+body.light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.gameContainer.light {
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#wordCountBtn { background-color: #4CAF50; color: white; }
+#nextBtn { background-color: #2196F3; color: white; }
+#solveBtn { background-color: #FFC107; color: white; }
+
+/* Dark mode colors */
+body.dark {
+    background-color: #333;
+    color: #E3F2FD;
+}
+
+.gameContainer.dark {
+    background-color: #444;
+    border: 1px solid #555;
+}
+
+body.dark button {
+    background-color: #555;
+    color: #E3F2FD;
+}
+
+body.dark input {
+    background-color: #666;
+    color: #E3F2FD;
+    border: 1px solid #888;
+}
+/* Dark mode button colors */
+body.dark #wordCountBtn { background-color: #555; color: #E3F2FD; }
+body.dark #nextBtn { background-color: #555; color: #E3F2FD; }
+body.dark #solveBtn { background-color: #555; color: #E3F2FD; }
+
+/* Light mode input colors */
+input {
+    background-color: #fff; /* Light mode input background */
+    color: #333; /* Light mode input text color */
+    border: 1px solid #ccc; /* Light mode input border */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive styles */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Responsive grid */
+}
+
+#rows, #cols {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}

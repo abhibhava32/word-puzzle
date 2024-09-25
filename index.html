@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <div class="topBtnContainer">
+        <div>
+            <label for="rows">Rows:</label>
+            <input type="number" id="rows" min="3" max="7" value="5">
+            <label for="cols">Columns:</label>
+            <input type="number" id="cols" min="3" max="7" value="5">
+            <button id="setGridSizeBtn">Set Grid Size</button>
+        </div>
+        <div>
+            <button id="nextBtn">Next</button>
+            <button id="solveBtn">Solve</button>
+        </div>
+        
+    </div>
+    <div class="snap-container">
+        <div class="gameContainerBtn">
+            <div id="timer">15s</div>
+            <div class="button-container">
+            <button id="wordCountBtn">Hidden Words: 2</button>
+            </div>
+            
+        </div>
+        <div class="gameContainer">
+            
+            <div class="container">
+                <div class="grid-container">
+                    <!-- This grid will be populated using JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dark-mode.js"></script>
+</body>
+</html>
